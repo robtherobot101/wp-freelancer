@@ -1,1 +1,9 @@
 node_modules
+
+#Pinegrow backup files
+_pgbackup/*
+_pgexport/*
+
+#Pinegrow setting file
+pinegrow.json
+

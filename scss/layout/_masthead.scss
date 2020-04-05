@@ -9,8 +9,18 @@
     font-size: 1.25rem;
   }
   .masthead-avatar {
-    width: 15rem;
+    width: 20rem;
+    border-radius: 50%;
   }
+}
+.project-masthead {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    max-width: 25rem;
+    margin-bottom: 30px;
+    border-radius: $border-radius;
+    overflow: hidden;
 }
 
 @include media-breakpoint-up(lg) {

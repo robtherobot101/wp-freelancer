@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" wp-template wp-template-post-template-name="master" wp-template-export-as="index.php">
+<html lang="en" wp-template wp-template-post-template-name="master" wp-template-export-as="front-page.php">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -47,9 +47,9 @@
                     <!-- Icon Divider -->
                     <div class="divider-custom divider-light">
                         <div class="divider-custom-line"></div>
-                        <div class="divider-custom-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#" wp-meta-value-attr="6" wp-meta-value-attr-key="social_email" wp-meta-value-attr-attribute="href"> <i class="far fa-fw fa-envelope"></i> </a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#" wp-meta-value-attr="6" wp-meta-value-attr-key="social_github" wp-meta-value-attr-attribute="href"> <i class="fab fa-fw fa-github"></i> </a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#" wp-meta-value-attr="6" wp-meta-value-attr-key="social_linkedin" wp-meta-value-attr-attribute="href"> <i class="fab fa-fw fa-linkedin-in"></i> </a>
                         <div class="divider-custom-line"></div>
                     </div>
                     <!-- Masthead Subheading -->
@@ -69,7 +69,7 @@
                         <div class="divider-custom-line"></div>
                     </div>
                     <!-- Portfolio Grid Items -->
-                    <div class="row" wp-loop="portfolio" wp-loop-post-type-custom="portfolio_item" wp-loop-post-status="publish" wp-loop-nopaging="true" wp-loop-orderby="menu_order">
+                    <div class="row" wp-loop="portfolio" wp-loop-post-status="publish" wp-loop-nopaging="true" wp-loop-orderby="menu_order" wp-loop-post-type="post" wp-loop-category-name="Project">
                         <!-- Portfolio Item 1 -->
                         <div class="col-md-6 col-lg-4" wp-post-type="portfolio_item" wp-post-type-name="Portfolio items" wp-post-type-name-singular="Portfolio item" wp-post-type-public="true" wp-loop-item>
                             <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1" wp-call-function="echo '#portfolioModal-'.get_the_ID()" wp-call-function-set="attr" wp-call-function-set-attr="data-target">
@@ -240,7 +240,7 @@
                     </div>
                 </div>
             </section>
-            <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true" wp-the-id="portfolioModal" wp-loop="portfolio" wp-loop-post-type-custom="portfolio_item" wp-loop-post-status="publish" wp-loop-nopaging="true" wp-loop-orderby="menu_order">
+            <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true" wp-the-id="portfolioModal" wp-loop="portfolio" wp-loop-post-type-custom="post" wp-loop-post-status="publish" wp-loop-nopaging="true" wp-loop-orderby="menu_order" wp-loop-category-name="Project">
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -261,9 +261,9 @@
                                             <div class="divider-custom-line"></div>
                                         </div>
                                         <!-- Portfolio Modal - Image -->
-                                        <img class="img-fluid rounded mb-5" src="img/portfolio/cabin.png" alt="" wp-the-post-thumbnail wp-the-post-thumbnail-attr-class="img-responsive img-centered">
+                                        <img class="img-fluid rounded mb-5" src="img/portfolio/cabin.png" alt="" wp-the-post-thumbnail>
                                         <!-- Portfolio Modal - Text -->
-                                        <p class="mb-5" wp-the-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                        <p class="mb-5" cms-post-excerpt>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                         <button class="btn btn-primary" href="#" data-dismiss="modal">
                                             <i class="fas fa-times fa-fw"></i>
                                             Close Window
@@ -458,24 +458,24 @@
         <!-- Footer -->
         <!-- Copyright Section -->
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-        <footer class="footer text-center" wp-loop wp-loop-show-empty-text="false">
+        <footer class="footer text-center">
             <div class="container">
                 <div class="row">
                     <!-- Footer Location -->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4" wp-meta-value="6" wp-meta-value-key="footer1_title">Location</h4>
-                        <p class="lead mb-0" wp-meta-value="6" wp-meta-value-key="footer1_text">2215 John Daniel Drive <br>Clark, MO 65243</p>
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">2215 John Daniel Drive <br>Clark, MO 65243</p>
                     </div>
                     <!-- Footer Social Icons -->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4" wp-meta-value="6" wp-meta-value-key="footer2_title">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#" wp-meta-value-attr="6" wp-meta-value-attr-key="social_github" wp-meta-value-attr-attribute="href"> <i class="fab fa-fw fa-github"></i> </a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#" wp-meta-value-attr="6" wp-meta-value-attr-key="social_linkedin" wp-meta-value-attr-attribute="href"> <i class="fab fa-fw fa-linkedin-in"></i> </a>
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#"> <i class="fab fa-fw fa-github"></i> </a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#"> <i class="fab fa-fw fa-linkedin-in"></i> </a>
                     </div>
                     <!-- Footer About Text -->
                     <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4" wp-meta-value="6" wp-meta-value-key="footer3_title">About Freelancer</h4>
-                        <p class="lead mb-0" wp-meta-value="6" wp-meta-value-key="footer3_text">Freelance is a free to use, MIT licensed Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                        <p class="lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
                     </div>
                 </div>
             </div>

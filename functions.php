@@ -186,7 +186,7 @@ if ( ! function_exists( 'wp_freelancer_enqueue_scripts' ) ) :
     wp_enqueue_style( 'all', get_template_directory_uri() . '/vendor/fontawesome-free/css/all.min.css', false, null, 'all');
 
     wp_deregister_style( 'style-1' );
-    wp_enqueue_style( 'style-1', 'https://fonts.googleapis.com/css?family=Montserrat:400,700', false, null, 'all');
+    wp_enqueue_style( 'style-1', 'https://fonts.googleapis.com/css?family=Rubik:300,500', false, null, 'all');
 
     wp_deregister_style( 'style-2' );
     wp_enqueue_style( 'style-2', 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic', false, null, 'all');

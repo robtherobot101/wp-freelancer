@@ -1,7 +1,7 @@
 <?php
 
 function remove_header() {
-   if (!is_home()) {
+   if (is_front_page()) {
       return;
    }
    $css_to_hide_header = <<<EOT
@@ -9,7 +9,7 @@ function remove_header() {
     .navbar-toggler {
         display:none;
     }
-    #navbarResponsive {
+    .navbar-nav {
         display:none;
     }  
         </style>

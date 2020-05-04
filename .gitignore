@@ -7,3 +7,4 @@ _pgexport/*
 #Pinegrow setting file
 pinegrow.json
 
+*.zip

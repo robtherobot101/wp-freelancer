@@ -1,4 +1,23 @@
 <?php
+
+function remove_header() {
+   if (!is_home()) {
+      return;
+   }
+   $css_to_hide_header = <<<EOT
+   <style>
+    .navbar-toggler {
+        display:none;
+    }
+    #navbarResponsive {
+        display:none;
+    }  
+        </style>
+   EOT;
+   echo $css_to_hide_header;
+}
+add_action('wp_head', 'remove_header');
+
 if ( ! function_exists( 'wp_freelancer_setup' ) ) :
 
 function wp_freelancer_setup() {
